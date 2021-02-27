@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lemonzuo.mapper.LeafMapper">
+    <insert id="insertLeaf" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
+        INSERT INTO `leaf_data` (
+          `leaf_id`,
+          `type`,
+          `leaf_key`
+        )
+        VALUES
+          (
+            #{leafId},
+            #{type},
+            #{leafKey}
+          ) ;
+    </insert>
+</mapper>
